@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced</title>
+	<style type="text/css">
+		#body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body id="body">
+	<h1>Enter your number of minutes</h1>
+	<input id="minute" name="value" placeholder="your number...">
+	<button onclick="counterMinutes()">GO!</button>
+	<br>
+	<p id="result"></p>
+	<br>
+	<p id="time"></p>
+
+	<script type="text/javascript">
+		//time convert
+		//If we call the function and pass the number of minutes 200 we should get the message "200 minutes = 3 hour(s) and 20 minute(s)
+		function counterMinutes() {
+			var value = parseInt (document.getElementById("minute").value);
+			if (isNaN(value)) {
+				document.getElementById("result").innerHTML = "This is not a number!";
+			} else {
+				var hour = Math.round(value / 60);
+				var minutes = value % 60;
+				if (minutes!=0) {
+					var string = value + " minutes = " + hour + " hour(s) and " + minutes + " minute(s)";
+				} else {
+					var string = value + " minutes = " + hour + " hour(s)";
+				}
+				document.getElementById("result").innerHTML = string;
+			}
+		}
+		//previos date
+		var date = "Feb 23, 2017";
+		var day = new Date(date);
+		console.log ("today is " + day.toDateString());
+		var yesterday = new Date (--day);
+		console.log ("Yestarday was " + yesterday.toDateString());
+		//
+		//colorfull background
+		//pretty one 210 192 209
+
+		function randomColor (){
+			do {
+				var r = Math.round(Math.random()*1000);
+			} while (r>255);
+			return r
+		}
+		var col1= randomColor();
+		var col2= randomColor();
+		var col3= randomColor();
+		console.log(col1,col2,col3);
+		document.getElementById("body").style.backgroundColor = "rgb(" + col1+ ", "+col2+", "+col3+")";
+
+		//
+
+	</script>
+</body>
+</html>
