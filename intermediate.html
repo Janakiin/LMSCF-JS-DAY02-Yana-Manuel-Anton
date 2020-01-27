@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intermediate</title>
+</head>
+<body>
+
+	<h1>Enter your Grades</h1>
+	<input id="math" name="value" placeholder="Maths grade here...">
+	<input id="phys" name="value" placeholder="Physics grade here...">
+	<input id="eng" name="value" placeholder="English grade here...">
+	<button onclick="counterGrade()">GO!</button>
+	<br>
+	<br>
+	<p id="result"></p>
+
+	<script type="text/javascript">
+		//ex_1
+		var string = (function () {
+			var str = "i am a web developer";
+			var first = str.charAt(0);
+			str = str.slice(1,str.length);
+			str = first.toLocaleUpperCase() + str;
+			return str;
+		}())
+		console.log (string);
+
+		//ex_2
+		//Math, Physics and English
+		//Sum:12 Average: 4
+		function counterGrade () {
+			var math = document.getElementById("math").value;
+			math = Number(math);
+			var phys = document.getElementById("phys").value;
+			phys = Number(phys);
+			var eng = document.getElementById("eng").value;
+			eng = Number(eng);
+			var sum = math + phys + eng;
+			var ever = Math.round(sum/3);
+			var string = "Your Average Grade: " + ever + "<br>" + "Sum: " + sum;
+			document.getElementById("result").innerHTML = string;
+		}
+	</script>
+
+</body>
+</html>
