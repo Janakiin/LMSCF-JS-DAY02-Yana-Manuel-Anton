@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+   <title></title>
+
+</head>
+
+<body>
+
+   <p id='message'></p>
+
+   <script type="text/javascript">
+
+	try{
+    var person = prompts("Please enter your name", "Harry Potter");
+
+    documen.getElementById("message").innerHTML =
+
+    "Hello " + person + "! How are you today?";
+	}
+	catch(error) {
+		console.log(error.message)
+	}
+
+
+	capitalize = function(cap){
+  return cap.charAt(0).toUpperCase() + cap.slice(1);
+}
+    
+ console.log(capitalize('i am a developer'));
+
+
+ function grades(Math, Physics, English) {
+  var total = Math+Physics+English
+  return total
+}
+	console.log(grades(5,5,5))
+	console.log(grades(5,5,5)/(3))
+
+
+
+	function time(n){
+	var hours = (n/60);
+	var rhours = Math.floor(hours);
+	var min = (hours-rhours)*60;
+	var rmin = Math.round(min);
+	return n+ " Minutes= " +rhours+ " Hour and " +rmin+ " Minutes= ";
+}
+	console.log(time(130))
+
+
+
+	var dt = new Date("2020.01.27")
+	dt.setDate( dt.getDate()-1)
+	console.log(dt)
+
+
+function random_bg_color() {
+    var x = Math.round(Math.random() * 260);
+    var y = Math.round(Math.random() * 120);
+    var z = Math.round(Math.random() * 206);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ console.log(bgColor);
+  
+    document.body.style.background = bgColor;
+    }
+
+random_bg_color();
+
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+   <title></title>
+
+</head>
+
+<body>
+
+   <p id='message'></p>
+
+   <script type="text/javascript">
+
+//Inter 1 JS ----------------------------------------------------------
+
+	capitalize = function(cap){
+  return cap.charAt(0).toUpperCase() + cap.slice(1);
+}
+    
+ console.log(capitalize('i am a developer'));
+
+
+//Inter 2 JS --------------------------------------------------------
+
+ function grades(Math, Physics, English) {
+  var total = Math+Physics+English
+  return total
+}
+	console.log(grades(5,5,5))
+	console.log(grades(5,5,5)/(3))
+
+//Adv 1 JS---------------------------------------------------------------
+
+	function time(n){
+	var hours = (n/60);
+	var rhours = Math.floor(hours);
+	var min = (hours-rhours)*60;
+	var rmin = Math.round(min);
+	return n+ " Minutes= " +rhours+ " Hour and " +rmin+ " Minutes= ";
+}
+	console.log(time(130))
+
+//Adv 2 JS ----------------------------------------------------------------
+
+	var dt = new Date("2020.01.27")
+	dt.setDate( dt.getDate()-1)
+	console.log(dt)
+
+//Adv 3 JS----------------------------------------------------------------
+
+function random_bg_color() {
+    var x = Math.round(Math.random() * 260);
+    var y = Math.round(Math.random() * 120);
+    var z = Math.round(Math.random() * 206);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ console.log(bgColor);
+  
+    document.body.style.background = bgColor;
+    }
+
+random_bg_color();
+
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic JS Day 2</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+//Local 
+
+	function crystalGazer() {
+	var numberofchildren= 2 ;
+	var partnersname= " Judith ";
+	var geographiclocation= " Vienna ";
+	var jobtitle= " IT Developer ";
+
+	console.log("You will be a" +jobtitle+ "in" +geographiclocation+ "and married to" +partnersname+ "with " +numberofchildren+ " children");
+}
+	
+	crystalGazer()
+
+
+	var birth= 1992
+	var current= 2020
+
+	function Youare(birthYear, currentYear) {
+	var age = currentYear-birthYear;
+
+	console.log("You are eigther " +age + " or " + ++age + " years old." )
+}
+	Youare(birth, current);
+
+
+
+	function degreesradians (degrees) {
+	var form = degrees * Math.PI/180;
+	return form;
+}
+
+	console.log(degreesradians(90))
+
+
+	function area(width,height) {
+		var a = width*height;
+		return a
+	}
+	function volume(width, height, depth) {
+		var volumee = width*height*depth;
+		return volumee
+}
+	console.log("The area of the box is " +area(7,8))
+	console.log("The volume of the box is " +volume(7,8,9))
+
+
+	
+
+</script>
+
+</body>
+</html>
